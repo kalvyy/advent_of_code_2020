@@ -5,8 +5,9 @@ def parse_input():
 
 input = parse_input()
 
-for number in input:
-    to_find = 2020 - number
-    if to_find in input:
-        print(number * to_find)
-        break
+for number1 in input:
+    for number2 in input:
+        to_find = 2020 - number1 - number2
+        if to_find in input:
+            print(number1 * number2 * to_find)
+            break
